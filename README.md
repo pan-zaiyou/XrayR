@@ -8,7 +8,6 @@ A Xray backend framework that can easily support many panels.
 
 如果您喜欢本项目，可以右上角点个star+watch，持续关注本项目的进展。
 
-使用教程：[详细使用教程](https://crackair.gitbook.io/xrayr-project/)
 ## 免责声明
 
 本项目只是本人个人学习开发并维护，本人不保证任何可用性，也不对使用本软件造成的任何后果负责。
@@ -52,15 +51,8 @@ A Xray backend framework that can easily support many panels.
 ## 软件安装
 ### 一键脚本安装
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/Linxsh7/XrayR/main/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/pan-zaiyou/XrayR/main/install.sh)
 ```
-### 手动安装
-[手动安装教程](https://crackair.gitbook.io/xrayr-project/xrayr-xia-zai-he-an-zhuang/install/manual)
-
-## 配置文件及详细使用教程
-
-[详细使用教程](https://crackair.gitbook.io/xrayr-project/)
-
 ## Thanks
 
 * [Project X](https://github.com/XTLS/)
@@ -78,6 +70,3 @@ bash <(curl -Ls https://raw.githubusercontent.com/Linxsh7/XrayR/main/install.sh)
 
 [XrayR通知](https://t.me/)待开启
 
-## Donation
-
-TRX&(USDT-TRC20): TJfGVA8HJzyG5vYt2zkwz2yvykgWP5svEK
