@@ -106,12 +106,12 @@ install_XrayR() {
     mkdir /usr/local/XrayR/ -p
 	cd /usr/local/XrayR/
 
-    wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR https://github.com/Linxsh7/xrayr/releases/download/0.8.0/${arch}
+    wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR https://github.com/pan-zaiyou/xrayr/releases/download/0.8.0/${arch}
 
     chmod +x /usr/local/XrayR/XrayR
     mkdir /etc/XrayR/ -p
     rm /etc/systemd/system/XrayR.service -f
-    file="https://raw.githubusercontent.com/Linxsh7/xrayr/main/XrayR.service"
+    file="https://raw.githubusercontent.com/pan-zaiyou/xrayr/main/XrayR.service"
     wget -q -N --no-check-certificate -O /etc/systemd/system/XrayR.service ${file}
     #cp -f XrayR.service /etc/systemd/system/
     systemctl daemon-reload
@@ -122,7 +122,7 @@ install_XrayR() {
     wget -q -N --no-check-certificate -O /etc/XrayR/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
 
     if [[ ! -f /etc/XrayR/config.yml ]]; then
-        wget -q -N --no-check-certificate -O /etc/XrayR/config.yml https://raw.githubusercontent.com/Linxsh7/XrayR/main/config.yml
+        wget -q -N --no-check-certificate -O /etc/XrayR/config.yml https://raw.githubusercontent.com/pan-zaiyou/XrayR/main/config.yml
         echo -e ""
         echo -e "全新安装，请先参看教程：https://crackair.gitbook.io/xrayr-project，配置必要的内容"
     else
@@ -138,21 +138,21 @@ install_XrayR() {
     fi
 
     if [[ ! -f /etc/XrayR/dns.json ]]; then
-        wget -q -N --no-check-certificate -O /etc/XrayR/dns.json https://raw.githubusercontent.com/Linxsh7/XrayR/main/dns.json
+        wget -q -N --no-check-certificate -O /etc/XrayR/dns.json https://raw.githubusercontent.com/pan-zaiyou/XrayR/main/dns.json
     fi
     if [[ ! -f /etc/XrayR/route.json ]]; then
-        wget -q -N --no-check-certificate -O /etc/XrayR/route.json https://raw.githubusercontent.com/Linxsh7/XrayR/main/route.json
+        wget -q -N --no-check-certificate -O /etc/XrayR/route.json https://raw.githubusercontent.com/pan-zaiyou/XrayR/main/route.json
     fi
     if [[ ! -f /etc/XrayR/custom_outbound.json ]]; then
-        wget -q -N --no-check-certificate -O /etc/XrayR/custom_outbound.json https://raw.githubusercontent.com/Linxsh7/XrayR/main/custom_outbound.json
+        wget -q -N --no-check-certificate -O /etc/XrayR/custom_outbound.json https://raw.githubusercontent.com/pan-zaiyou/XrayR/main/custom_outbound.json
     fi
     #if [[ ! -f /etc/XrayR/custom_inbound.json ]]; then
         #cp custom_inbound.json /etc/XrayR/
     #fi
     if [[ ! -f /etc/XrayR/rulelist ]]; then
-        wget -q -N --no-check-certificate -O /etc/XrayR/rulelist https://raw.githubusercontent.com/Linxsh7/XrayR/main/rulelist
+        wget -q -N --no-check-certificate -O /etc/XrayR/rulelist https://raw.githubusercontent.com/pan-zaiyou/XrayR/main/rulelist
     fi
-    curl -o /usr/bin/XrayR -Ls https://raw.githubusercontent.com/Linxsh7/XrayR/main/XrayR.sh
+    curl -o /usr/bin/XrayR -Ls https://raw.githubusercontent.com/pan-zaiyou/XrayR/main/XrayR.sh
     chmod +x /usr/bin/XrayR
     ln -s /usr/bin/XrayR /usr/bin/xrayr # 小写兼容
     chmod +x /usr/bin/xrayr
